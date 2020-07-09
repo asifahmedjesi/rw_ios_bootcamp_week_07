@@ -2,7 +2,7 @@
 //  NewPostView.swift
 //  Birdui
 //
-//  Created by Audrey Tam on 4/7/20.
+//  Created by Asif Ahmed Jesi on 9/7/20.
 //  Copyright © 2020 Razeware. All rights reserved.
 //
 
@@ -61,3 +61,4 @@ struct NewPostView_Previews: PreviewProvider {
     NewPostView(postHandler: PostViewModel())
   }
 }
+
