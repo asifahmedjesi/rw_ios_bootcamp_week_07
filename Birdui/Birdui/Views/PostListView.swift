@@ -20,7 +20,7 @@ struct PostListView: View {
             PostListHeaderView(modalIsPresented: $modalIsPresented)            
             List {
                 Toggle(isOn: $isFilteringLovedPosts) {
-                  Text(verbatim: "Show loved posts only")
+                    Text(verbatim: "Show only loved posts")
                 }
                 ForEach(postHandler.posts) { index in
                     if !self.isFilteringLovedPosts || self.postHandler.posts[index].reaction == .love {

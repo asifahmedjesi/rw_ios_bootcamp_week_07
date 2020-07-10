@@ -24,6 +24,7 @@ class AppStyles {
             return content
                 .padding(.leading, 16)
                 .font(Font.custom("Arial Rounded MT Bold", size: 18))
+                .accentColor(K.darkOrange)
         }
     }
     

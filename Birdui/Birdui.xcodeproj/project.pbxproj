@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		735E0B0F24B8CDE900B566D2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735E0B0E24B8CDE900B566D2 /* Constants.swift */; };
 		763EEF0E24B7627D008FBF05 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763EEF0D24B7627D008FBF05 /* PostListView.swift */; };
 		763EEF1024B763E9008FBF05 /* MediaPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763EEF0F24B763E9008FBF05 /* MediaPost.swift */; };
 		763EEF1224B76410008FBF05 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763EEF1124B76410008FBF05 /* PostViewModel.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		735E0B0E24B8CDE900B566D2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		763EEF0D24B7627D008FBF05 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		763EEF0F24B763E9008FBF05 /* MediaPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPost.swift; sourceTree = "<group>"; };
 		763EEF1124B76410008FBF05 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		763EEF0B24B75594008FBF05 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				735E0B0E24B8CDE900B566D2 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -121,12 +124,12 @@
 		CD7798B724AF0799004D6A6B /* Birdui */ = {
 			isa = PBXGroup;
 			children = (
-				763EEF0C24B755A1008FBF05 /* Extensions */,
-				763EEF0B24B75594008FBF05 /* Utilities */,
-				763EEF0924B75571008FBF05 /* Views */,
-				763EEF0824B75569008FBF05 /* Models */,
 				CD7798B824AF0799004D6A6B /* AppDelegate.swift */,
 				CD7798BA24AF0799004D6A6B /* SceneDelegate.swift */,
+				763EEF0924B75571008FBF05 /* Views */,
+				763EEF0824B75569008FBF05 /* Models */,
+				763EEF0C24B755A1008FBF05 /* Extensions */,
+				763EEF0B24B75594008FBF05 /* Utilities */,
 				CD7798BE24AF079C004D6A6B /* Assets.xcassets */,
 				CD7798C324AF079C004D6A6B /* LaunchScreen.storyboard */,
 				CD7798C624AF079C004D6A6B /* Info.plist */,
@@ -221,6 +224,7 @@
 				763EEF1024B763E9008FBF05 /* MediaPost.swift in Sources */,
 				76D38BB524B87B6D002EA5BA /* Image+Extension.swift in Sources */,
 				CD7798B924AF0799004D6A6B /* AppDelegate.swift in Sources */,
+				735E0B0F24B8CDE900B566D2 /* Constants.swift in Sources */,
 				763EEF1624B7743C008FBF05 /* NewPostView.swift in Sources */,
 				763EEF0E24B7627D008FBF05 /* PostListView.swift in Sources */,
 				76D38BB124B872D4002EA5BA /* AppStyles.swift in Sources */,
