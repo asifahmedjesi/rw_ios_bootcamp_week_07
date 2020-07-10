@@ -42,7 +42,7 @@ struct NewPostView: View {
                 }
                 Spacer()
                 Button("Post") {
-                    self.postHandler.addPost(post: MediaPost(textBody: self.postText, userName: self.username, timestamp: Date(), uiImage: self.uiImage))
+                    self.postHandler.addPost(post: MediaPost(textBody: self.postText, userName: self.username, timestamp: Date(), uiImage: self.uiImage, reaction: Reaction.allCases.randomElement()!))
                     self.presentationMode.wrappedValue.dismiss()
                 }
                 .disabled(username.isEmpty && postText.isEmpty)

@@ -25,6 +25,12 @@ struct PostListRowView: View {
                         Text(post.userName).postTitleStyle()
                         Text(post.timestamp.formatted).postSubTitleStyle()
                     }
+                    Picker("Reaction", selection: $post.reaction) {
+                      ForEach(Reaction.allCases, id: \.self) { reaction in
+                        Text(reaction.rawValue).tag(reaction)
+                      }
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
                 }
                 if post.textBody != nil {
                     Text(post.textBody!).postTextStyle()
@@ -48,7 +54,8 @@ struct PostView_Previews: PreviewProvider {
                 MediaPost(textBody: "Went to the Aquarium today :]",
                           userName: "Audrey",
                           timestamp: Date(timeIntervalSinceNow: -9876),
-                          uiImage: UIImage(named: "octopus")))
+                          uiImage: UIImage(named: "octopus"),
+                          reaction: Reaction.allCases.randomElement()!))
         )
     }
 }

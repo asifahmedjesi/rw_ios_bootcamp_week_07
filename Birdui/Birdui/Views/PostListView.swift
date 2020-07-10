@@ -17,10 +17,15 @@ struct PostListView: View {
     var body: some View {
         
         VStack {
-            PostListHeaderView(modalIsPresented: $modalIsPresented)
+            PostListHeaderView(modalIsPresented: $modalIsPresented)            
             List {
+                Toggle(isOn: $isFilteringLovedPosts) {
+                  Text(verbatim: "Show loved posts only")
+                }
                 ForEach(postHandler.posts) { index in
-                    PostListRowView(post: self.$postHandler.posts[index])
+                    if !self.isFilteringLovedPosts || self.postHandler.posts[index].reaction == .love {
+                        PostListRowView(post: self.$postHandler.posts[index])
+                    }
                 }
             }
         }

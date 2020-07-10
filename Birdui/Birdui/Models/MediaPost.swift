@@ -10,9 +10,17 @@ import Foundation
 import UIKit
 
 struct MediaPost: Identifiable {
-  let id = UUID()
-  let textBody: String?
-  let userName: String
-  let timestamp: Date
-  let uiImage: UIImage?
+    let id = UUID()
+    let textBody: String?
+    let userName: String
+    let timestamp: Date
+    let uiImage: UIImage?
+    var reaction: Reaction
+}
+
+enum Reaction: String, CaseIterable {
+    case love = "😻"
+    case funny = "😹"
+    case unsure = "😿"
+    case shock = "🙀"
 }
