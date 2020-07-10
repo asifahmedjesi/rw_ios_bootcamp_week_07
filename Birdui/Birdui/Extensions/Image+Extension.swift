@@ -19,13 +19,4 @@ extension Image {
     func headerImageStyle(width: CGFloat, height: CGFloat) -> some View {
         self.modifier(AppStyles.HeaderImageStyle(image: self, width: width, height: height))
     }
-    func postTextStyle() -> some View {
-        self.modifier(AppStyles.PostTextStyle())
-    }
-    func postTitleStyle() -> some View {
-        self.modifier(AppStyles.PostTitleStyle())
-    }
-    func buttonTitleStyle() -> some View {
-        self.modifier(AppStyles.ButtonTextStyle())
-    }
 }
