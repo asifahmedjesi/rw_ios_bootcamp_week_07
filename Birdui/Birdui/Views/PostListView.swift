@@ -14,9 +14,12 @@ struct PostListView: View {
     
     var body: some View {
         
-        List {
-            ForEach(postHandler.posts) { index in
-                PostListRowView(post: self.$postHandler.posts[index])
+        VStack {
+            PostListHeaderView()
+            List {
+                ForEach(postHandler.posts) { index in
+                    PostListRowView(post: self.$postHandler.posts[index])
+                }
             }
         }
     

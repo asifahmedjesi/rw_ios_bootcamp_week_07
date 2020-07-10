@@ -19,10 +19,11 @@ struct PostListHeaderView: View {
                 Image("mascot_swift-badge")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 100, height: 100)
+                    .frame(width: 60, height: 60)
+                    .padding(.leading, 16)
                 Text("HOME")
                     .foregroundColor(Color.black)
-                    .font(Font.custom("Arial Rounded MT Bold", size: 35))
+                    .font(Font.custom("Arial Rounded MT Bold", size: 26))
                 Spacer()
             }
             
@@ -30,8 +31,8 @@ struct PostListHeaderView: View {
                 
             }) {
                 Text("Create New Post")
-                    .padding()
-                    .font(Font.custom("Arial Rounded MT Bold", size: 22))
+                    .padding(.leading, 16)
+                    .font(Font.custom("Arial Rounded MT Bold", size: 18))
             }
         }
         

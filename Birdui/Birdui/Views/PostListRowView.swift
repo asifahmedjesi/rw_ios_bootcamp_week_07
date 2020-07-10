@@ -47,7 +47,7 @@ struct PostListRowView: View {
             }
             
         }
-        .padding()
+        
         
     }
 }
