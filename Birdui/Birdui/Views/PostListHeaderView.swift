@@ -17,16 +17,10 @@ struct PostListHeaderView: View {
         VStack(alignment: .leading) {
             
             HStack(alignment: .center) {
-                
-                Image("mascot_swift-badge")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 50, height: 50)
-                    .padding(.leading, 16)
+                Image("mascot_swift-badge").headerImageStyle(width: 50, height: 50)
                 Text("HOME").headterTitleStyle()
                 Spacer()
-            }
-            
+            }            
             Button(action: {
                 self.modalIsPresented = true
             }) {

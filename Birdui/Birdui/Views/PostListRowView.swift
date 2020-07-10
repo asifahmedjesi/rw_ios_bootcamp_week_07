@@ -17,10 +17,7 @@ struct PostListRowView: View {
         VStack(alignment: .leading) {
 
             HStack(alignment: .center) {
-                Image("mascot_swift-badge")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 50, height: 50)
+                Image("mascot_swift-badge").imageStyle(width: 50, height: 50)
                 VStack(alignment: .leading) {
                     Text(post.userName).postTitleStyle()
                     Text(post.timestamp.formatted).postTitleStyle()
@@ -30,14 +27,11 @@ struct PostListRowView: View {
                 Text(post.textBody!).postTextStyle()
             }
             if post.uiImage != nil {
-                Image(uiImage: post.uiImage!)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+                Image(uiImage: post.uiImage!).imageStyle()
             }
             
         }
-        
-        
+
     }
 }
 
