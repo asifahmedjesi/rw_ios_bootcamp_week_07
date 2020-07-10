@@ -14,24 +14,30 @@ struct PostListRowView: View {
     
     var body: some View {
         
-        VStack(alignment: .leading) {
-
-            HStack(alignment: .center) {
-                Image("mascot_swift-badge").imageStyle(width: 50, height: 50)
-                VStack(alignment: .leading) {
-                    Text(post.userName).postTitleStyle()
-                    Text(post.timestamp.formatted).postTitleStyle()
+        VStack {
+            VStack(alignment: .leading) {
+                HStack {
+                    Spacer()
+                }
+                HStack(alignment: .center) {
+                    Image("mascot_swift-badge").imageStyle(width: 50, height: 50)
+                    VStack(alignment: .leading) {
+                        Text(post.userName).postTitleStyle()
+                        Text(post.timestamp.formatted).postSubTitleStyle()
+                    }
+                }
+                if post.textBody != nil {
+                    Text(post.textBody!).postTextStyle()
                 }
             }
-            if post.textBody != nil {
-                Text(post.textBody!).postTextStyle()
+            VStack(alignment: .center) {
+                if post.uiImage != nil {
+                    
+                    Image(uiImage: post.uiImage!).imageStyle(width: 200, height: 200)
+                }
             }
-            if post.uiImage != nil {
-                Image(uiImage: post.uiImage!).imageStyle()
-            }
-            
         }
-
+        
     }
 }
 

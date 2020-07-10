@@ -11,7 +11,8 @@ import SwiftUI
 struct PostListView: View {
     
     @ObservedObject var postHandler: PostViewModel
-    @State var modalIsPresented = false
+    @State private var modalIsPresented = false
+    @State private var isFilteringLovedPosts: Bool = false
     
     var body: some View {
         

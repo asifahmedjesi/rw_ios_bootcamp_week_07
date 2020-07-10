@@ -46,7 +46,15 @@ class AppStyles {
         func body(content: Content) -> some View {
             return content
                 .foregroundColor(Color.black)
-                .font(.system(size: 18))
+                .font(.system(size: 14))
+        }
+    }
+    
+    struct PostSubTitleStyle: ViewModifier {
+        func body(content: Content) -> some View {
+            return content
+                .foregroundColor(Color.gray)
+                .font(.system(size: 12))
         }
     }
     
@@ -80,7 +88,7 @@ class AppStyles {
         func body(content: Content) -> some View {
             return image
                 .modifier(ImageStyleWithFrame(image: image, width: width, height: height))
-                .padding(.leading, 16)
+                .padding(.leading, 16)                
         }
     }
     

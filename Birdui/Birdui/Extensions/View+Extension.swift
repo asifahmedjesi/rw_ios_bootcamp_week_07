@@ -19,6 +19,9 @@ extension View {
     func postTitleStyle() -> some View {
         self.modifier(AppStyles.PostTitleStyle())
     }
+    func postSubTitleStyle() -> some View {
+        self.modifier(AppStyles.PostSubTitleStyle())
+    }
     func buttonTitleStyle() -> some View {
         self.modifier(AppStyles.ButtonTextStyle())
     }
