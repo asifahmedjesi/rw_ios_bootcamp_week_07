@@ -27,6 +27,9 @@ struct PostListView: View {
                         PostListRowView(post: self.$postHandler.posts[index])
                     }
                 }
+                if self.isFilteringLovedPosts && self.postHandler.countLoveReactions() {
+                    Image("empty-list").resizable().aspectRatio(contentMode: .fit)
+                }
             }
         }
         .sheet(isPresented: $modalIsPresented) {

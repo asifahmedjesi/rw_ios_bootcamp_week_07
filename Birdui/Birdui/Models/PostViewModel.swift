@@ -25,4 +25,13 @@ class PostViewModel: ObservableObject {
         posts.append(post)
         posts = posts.sorted(by: { $0.timestamp > $1.timestamp })
     }
+    
+    func countLoveReactions() -> Bool {
+        if posts.filter({ $0.reaction == .love }).count == 0 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
 }
