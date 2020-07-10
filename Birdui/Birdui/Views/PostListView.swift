@@ -11,16 +11,20 @@ import SwiftUI
 struct PostListView: View {
     
     @ObservedObject var postHandler: PostViewModel
+    @State var modalIsPresented = false
     
     var body: some View {
         
         VStack {
-            PostListHeaderView()
+            PostListHeaderView(modalIsPresented: $modalIsPresented)
             List {
                 ForEach(postHandler.posts) { index in
                     PostListRowView(post: self.$postHandler.posts[index])
                 }
             }
+        }
+        .sheet(isPresented: $modalIsPresented) {
+            NewPostView(postHandler: self.postHandler)
         }
     
     }

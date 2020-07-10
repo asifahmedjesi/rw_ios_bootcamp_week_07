@@ -10,6 +10,8 @@ import SwiftUI
 
 struct PostListHeaderView: View {
     
+    @Binding var modalIsPresented: Bool
+    
     var body: some View {
         
         VStack(alignment: .leading) {
@@ -28,7 +30,7 @@ struct PostListHeaderView: View {
             }
             
             Button(action: {
-                
+                self.modalIsPresented = true
             }) {
                 Text("Create New Post")
                     .padding(.leading, 16)
@@ -41,6 +43,6 @@ struct PostListHeaderView: View {
 
 struct PostListHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        PostListHeaderView()
+        PostListHeaderView(modalIsPresented: .constant(false))
     }
 }
