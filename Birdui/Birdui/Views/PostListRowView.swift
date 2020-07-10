@@ -15,30 +15,19 @@ struct PostListRowView: View {
     var body: some View {
         
         VStack(alignment: .leading) {
-            
+
             HStack(alignment: .center) {
-                
                 Image("mascot_swift-badge")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 50, height: 50)
-                
                 VStack(alignment: .leading) {
-                    
-                    Text(post.userName)
-                        .foregroundColor(Color.black)
-                        .font(.system(size: 20))
-                    Text(post.timestamp.formatted)
-                        .foregroundColor(Color.black)
-                        .font(.system(size: 20))
+                    Text(post.userName).postTitleStyle()
+                    Text(post.timestamp.formatted).postTitleStyle()
                 }
-                
             }
-            
             if post.textBody != nil {
-                Text(post.textBody!)
-                    .foregroundColor(Color.black)
-                    .font(.system(size: 18))
+                Text(post.textBody!).postTextStyle()
             }
             if post.uiImage != nil {
                 Image(uiImage: post.uiImage!)

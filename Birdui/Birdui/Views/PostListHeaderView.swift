@@ -21,24 +21,21 @@ struct PostListHeaderView: View {
                 Image("mascot_swift-badge")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 60, height: 60)
+                    .frame(width: 50, height: 50)
                     .padding(.leading, 16)
-                Text("HOME")
-                    .foregroundColor(Color.black)
-                    .font(Font.custom("Arial Rounded MT Bold", size: 26))
+                Text("HOME").headterTitleStyle()
                 Spacer()
             }
             
             Button(action: {
                 self.modalIsPresented = true
             }) {
-                Text("Create New Post")
-                    .padding(.leading, 16)
-                    .font(Font.custom("Arial Rounded MT Bold", size: 18))
+                Text("Create New Post").buttonTitleStyle()
             }
         }
         
     }
+    
 }
 
 struct PostListHeaderView_Previews: PreviewProvider {
