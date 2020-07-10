@@ -39,6 +39,7 @@ class AppStyles {
             return content
                 .foregroundColor(Color.black)
                 .font(.system(size: 17))
+                .fixedSize(horizontal: false, vertical: true)
         }
     }
     
