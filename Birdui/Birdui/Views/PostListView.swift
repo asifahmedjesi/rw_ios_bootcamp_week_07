@@ -9,13 +9,22 @@
 import SwiftUI
 
 struct PostListView: View {
+    
+    @ObservedObject var postHandler: PostViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        List {
+            ForEach(postHandler.posts) { index in
+                PostListRowView(post: self.$postHandler.posts[index])
+            }
+        }
+    
     }
 }
 
 struct PostListView_Previews: PreviewProvider {
     static var previews: some View {
-        PostListView()
+        PostListView(postHandler: PostViewModel())
     }
 }

@@ -9,7 +9,9 @@
 import SwiftUI
 
 struct NewPostView: View {
+    
   var postHandler: PostViewModel
+
   @Environment(\.presentationMode) var presentationMode
   
   @State var username: String = ""

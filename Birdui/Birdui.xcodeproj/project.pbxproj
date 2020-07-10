@@ -10,9 +10,13 @@
 		763EEF0E24B7627D008FBF05 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763EEF0D24B7627D008FBF05 /* PostListView.swift */; };
 		763EEF1024B763E9008FBF05 /* MediaPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763EEF0F24B763E9008FBF05 /* MediaPost.swift */; };
 		763EEF1224B76410008FBF05 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763EEF1124B76410008FBF05 /* PostViewModel.swift */; };
-		763EEF1424B773CE008FBF05 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763EEF1324B773CE008FBF05 /* PostView.swift */; };
+		763EEF1424B773CE008FBF05 /* PostListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763EEF1324B773CE008FBF05 /* PostListRowView.swift */; };
 		763EEF1624B7743C008FBF05 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763EEF1524B7743C008FBF05 /* NewPostView.swift */; };
 		763EEF1824B775CA008FBF05 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763EEF1724B775CA008FBF05 /* ImagePicker.swift */; };
+		764AB80524B7976500D7CD1A /* PostListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764AB80424B7976500D7CD1A /* PostListHeaderView.swift */; };
+		764AB80924B7A8C100D7CD1A /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764AB80824B7A8C100D7CD1A /* Date+Extension.swift */; };
+		76D38BA824B7F1A2002EA5BA /* ForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D38BA724B7F1A2002EA5BA /* ForEach.swift */; };
+		76D38BAA24B7F1C6002EA5BA /* IndexedCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D38BA924B7F1C6002EA5BA /* IndexedCollection.swift */; };
 		CD7798B924AF0799004D6A6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7798B824AF0799004D6A6B /* AppDelegate.swift */; };
 		CD7798BB24AF0799004D6A6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7798BA24AF0799004D6A6B /* SceneDelegate.swift */; };
 		CD7798BF24AF079C004D6A6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7798BE24AF079C004D6A6B /* Assets.xcassets */; };
@@ -24,9 +28,13 @@
 		763EEF0D24B7627D008FBF05 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		763EEF0F24B763E9008FBF05 /* MediaPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPost.swift; sourceTree = "<group>"; };
 		763EEF1124B76410008FBF05 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
-		763EEF1324B773CE008FBF05 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		763EEF1324B773CE008FBF05 /* PostListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListRowView.swift; sourceTree = "<group>"; };
 		763EEF1524B7743C008FBF05 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 		763EEF1724B775CA008FBF05 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		764AB80424B7976500D7CD1A /* PostListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListHeaderView.swift; sourceTree = "<group>"; };
+		764AB80824B7A8C100D7CD1A /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		76D38BA724B7F1A2002EA5BA /* ForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEach.swift; sourceTree = "<group>"; };
+		76D38BA924B7F1C6002EA5BA /* IndexedCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexedCollection.swift; sourceTree = "<group>"; };
 		CD7798B524AF0799004D6A6B /* Birdui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birdui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7798B824AF0799004D6A6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD7798BA24AF0799004D6A6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,9 +58,9 @@
 		763EEF0824B75569008FBF05 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				763EEF1724B775CA008FBF05 /* ImagePicker.swift */,
 				763EEF0F24B763E9008FBF05 /* MediaPost.swift */,
 				763EEF1124B76410008FBF05 /* PostViewModel.swift */,
-				763EEF1724B775CA008FBF05 /* ImagePicker.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -60,9 +68,10 @@
 		763EEF0924B75571008FBF05 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				763EEF0D24B7627D008FBF05 /* PostListView.swift */,
-				763EEF1324B773CE008FBF05 /* PostView.swift */,
 				763EEF1524B7743C008FBF05 /* NewPostView.swift */,
+				764AB80424B7976500D7CD1A /* PostListHeaderView.swift */,
+				763EEF1324B773CE008FBF05 /* PostListRowView.swift */,
+				763EEF0D24B7627D008FBF05 /* PostListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -77,6 +86,9 @@
 		763EEF0C24B755A1008FBF05 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				764AB80824B7A8C100D7CD1A /* Date+Extension.swift */,
+				76D38BA724B7F1A2002EA5BA /* ForEach.swift */,
+				76D38BA924B7F1C6002EA5BA /* IndexedCollection.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -193,13 +205,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76D38BA824B7F1A2002EA5BA /* ForEach.swift in Sources */,
+				76D38BAA24B7F1C6002EA5BA /* IndexedCollection.swift in Sources */,
 				763EEF1224B76410008FBF05 /* PostViewModel.swift in Sources */,
 				763EEF1024B763E9008FBF05 /* MediaPost.swift in Sources */,
 				CD7798B924AF0799004D6A6B /* AppDelegate.swift in Sources */,
 				763EEF1624B7743C008FBF05 /* NewPostView.swift in Sources */,
 				763EEF0E24B7627D008FBF05 /* PostListView.swift in Sources */,
+				764AB80924B7A8C100D7CD1A /* Date+Extension.swift in Sources */,
+				764AB80524B7976500D7CD1A /* PostListHeaderView.swift in Sources */,
 				763EEF1824B775CA008FBF05 /* ImagePicker.swift in Sources */,
-				763EEF1424B773CE008FBF05 /* PostView.swift in Sources */,
+				763EEF1424B773CE008FBF05 /* PostListRowView.swift in Sources */,
 				CD7798BB24AF0799004D6A6B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
