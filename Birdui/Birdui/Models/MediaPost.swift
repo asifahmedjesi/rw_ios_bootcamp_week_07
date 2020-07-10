@@ -19,8 +19,8 @@ struct MediaPost: Identifiable {
 }
 
 enum Reaction: String, CaseIterable {
-    case love = "😻"
-    case funny = "😹"
-    case unsure = "😿"
-    case shock = "🙀"
+    case love = "❤️"
+    case funny = "😂"
+    case unsure = "😐"
+    case shock = "😱"
 }
