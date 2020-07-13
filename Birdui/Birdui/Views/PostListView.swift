@@ -35,6 +35,9 @@ struct PostListView: View {
         .sheet(isPresented: $modalIsPresented) {
             NewPostView(postHandler: self.postHandler)
         }
+        .onAppear(perform: {
+            UITableView.appearance().separatorStyle = .none
+        })
     
     }
 }

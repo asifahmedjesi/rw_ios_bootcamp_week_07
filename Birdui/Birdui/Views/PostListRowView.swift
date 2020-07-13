@@ -15,35 +15,48 @@ struct PostListRowView: View {
     var body: some View {
         
         VStack {
-            VStack(alignment: .leading) {
-                HStack {
-                    Spacer()
-                }
-                HStack(alignment: .center) {
-                    Image("mascot_swift-badge").imageStyle(width: 50, height: 50)
-                    VStack(alignment: .leading) {
-                        Text(post.userName).postTitleStyle()
-                        Text(post.timestamp.formatted).postSubTitleStyle()
+            VStack {
+                VStack(alignment: .leading) {
+                    HStack {
+                        Image("mascot_swift-badge")
+                            .imageStyle(width: 50, height: 50)
+                        VStack(alignment: .leading) {
+                            Text(post.userName)
+                                .fontWeight(.semibold)
+                                .postTitleStyle()
+                            Text(post.timestamp.formatted)
+                                .postSubTitleStyle()
+                        }
+                        Spacer()
                     }
-                    Picker("Reaction", selection: $post.reaction) {
-                      ForEach(Reaction.allCases, id: \.self) { reaction in
-                        Text(reaction.rawValue).tag(reaction)
-                      }
+                    if post.textBody != nil {
+                        Text(post.textBody!)
+                            .postTextStyle()
                     }
-                    .pickerStyle(SegmentedPickerStyle())
+
                 }
-                if post.textBody != nil {
-                    Text(post.textBody!).postTextStyle()
-                }
-            }
-            VStack(alignment: .center) {
+                .padding(.horizontal, 15)
+                .padding(.vertical, 15)
+                Spacer()
                 if post.uiImage != nil {
-                    
-                    Image(uiImage: post.uiImage!).imageStyle(width: 200, height: 200)
+                    Image(uiImage: post.uiImage!)
+                        .imageStyle(width: 200, height: 200)
                 }
             }
+            .background(Color("post-background"))
+            .cornerRadius(20)
+            .shadow(radius: 10)
+            
+            Picker("Reaction", selection: $post.reaction) {
+              ForEach(Reaction.allCases, id: \.self) { reaction in
+                Text(reaction.rawValue).tag(reaction)
+              }
+            }
+            .pickerStyle(SegmentedPickerStyle())
+                
+            .padding(.horizontal, 60)
         }
-        
+        .padding(.vertical, 20)
     }
 }
 

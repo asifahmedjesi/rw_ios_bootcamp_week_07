@@ -10,8 +10,6 @@ import SwiftUI
 
 class AppStyles {
     
-    static let darkOrange = Color(red: 247.0/255.0, green: 133.0/255.0, blue: 56.0/255.0)
-    
     struct HeaderTextStyle: ViewModifier {
         func body(content: Content) -> some View {
             return content
@@ -21,12 +19,12 @@ class AppStyles {
         }
     }
     
-    struct ButtonTextStyle: ViewModifier {
+    struct ButtonTitleStyle: ViewModifier {
         func body(content: Content) -> some View {
             return content
                 .padding(.leading, 16)
                 .font(Font.custom("Arial Rounded MT Bold", size: 18))
-                .accentColor(darkOrange)
+                .accentColor(Color("accent"))
         }
     }
     
@@ -41,7 +39,7 @@ class AppStyles {
         func body(content: Content) -> some View {
             return content
                 .foregroundColor(Color.black)
-                .font(.system(size: 17))
+                .font(.system(size: 15.0))
                 .fixedSize(horizontal: false, vertical: true)
         }
     }
@@ -49,16 +47,15 @@ class AppStyles {
     struct PostTitleStyle: ViewModifier {
         func body(content: Content) -> some View {
             return content
-                .foregroundColor(Color.black)
-                .font(.system(size: 14))
+                .font(.system(size: 20.0))
         }
     }
     
     struct PostSubTitleStyle: ViewModifier {
         func body(content: Content) -> some View {
             return content
-                .foregroundColor(Color.gray)
-                .font(.system(size: 12))
+                .font(.caption)
+                .foregroundColor(Color("accent"))
         }
     }
     

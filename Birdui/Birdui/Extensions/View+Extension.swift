@@ -10,7 +10,7 @@ import SwiftUI
 
 extension View {
     
-    func headterTitleStyle() -> some View {
+    func headerTextStyle() -> some View {
         self.modifier(AppStyles.HeaderTextStyle())
     }
     func postTextStyle() -> some View {
@@ -23,6 +23,6 @@ extension View {
         self.modifier(AppStyles.PostSubTitleStyle())
     }
     func buttonTitleStyle() -> some View {
-        self.modifier(AppStyles.ButtonTextStyle())
+        self.modifier(AppStyles.ButtonTitleStyle())
     }
 }
