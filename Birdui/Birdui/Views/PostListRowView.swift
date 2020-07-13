@@ -33,11 +33,10 @@ struct PostListRowView: View {
                         Text(post.textBody!)
                             .postTextStyle()
                     }
-
+                    
                 }
                 .padding(.horizontal, 15)
                 .padding(.vertical, 15)
-                Spacer()
                 if post.uiImage != nil {
                     Image(uiImage: post.uiImage!)
                         .imageStyle(width: 200, height: 200)
@@ -48,9 +47,9 @@ struct PostListRowView: View {
             .shadow(radius: 10)
             
             Picker("Reaction", selection: $post.reaction) {
-              ForEach(Reaction.allCases, id: \.self) { reaction in
-                Text(reaction.rawValue).tag(reaction)
-              }
+                ForEach(Reaction.allCases, id: \.self) { reaction in
+                    Text(reaction.rawValue).tag(reaction)
+                }
             }
             .pickerStyle(SegmentedPickerStyle())
                 

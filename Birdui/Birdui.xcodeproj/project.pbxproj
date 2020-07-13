@@ -41,7 +41,7 @@
 		76D38BB024B872D4002EA5BA /* AppStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyles.swift; sourceTree = "<group>"; };
 		76D38BB224B8751D002EA5BA /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		76D38BB424B87B6D002EA5BA /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
-		CD7798B524AF0799004D6A6B /* Birdui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birdui.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD7798B524AF0799004D6A6B /* BirdUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirdUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7798B824AF0799004D6A6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD7798BA24AF0799004D6A6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CD7798BE24AF079C004D6A6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		737AAD2624BCE36500435C4C /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				76D38BB024B872D4002EA5BA /* AppStyles.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		763EEF0824B75569008FBF05 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,7 +86,6 @@
 				763EEF1324B773CE008FBF05 /* PostListRowView.swift */,
 				763EEF0D24B7627D008FBF05 /* PostListView.swift */,
 				76D38BAD24B860D9002EA5BA /* ImagePicker.swift */,
-				76D38BB024B872D4002EA5BA /* AppStyles.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -113,7 +120,7 @@
 		CD7798B624AF0799004D6A6B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CD7798B524AF0799004D6A6B /* Birdui.app */,
+				CD7798B524AF0799004D6A6B /* BirdUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +131,7 @@
 				CD7798B824AF0799004D6A6B /* AppDelegate.swift */,
 				CD7798BA24AF0799004D6A6B /* SceneDelegate.swift */,
 				763EEF0924B75571008FBF05 /* Views */,
+				737AAD2624BCE36500435C4C /* Style */,
 				763EEF0824B75569008FBF05 /* Models */,
 				763EEF0C24B755A1008FBF05 /* Extensions */,
 				763EEF0B24B75594008FBF05 /* Utilities */,
@@ -160,7 +168,7 @@
 			);
 			name = Birdui;
 			productName = Birdui;
-			productReference = CD7798B524AF0799004D6A6B /* Birdui.app */;
+			productReference = CD7798B524AF0799004D6A6B /* BirdUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -374,7 +382,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.a4aero.Birdui;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BirdUI;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -394,7 +402,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.a4aero.Birdui;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BirdUI;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
