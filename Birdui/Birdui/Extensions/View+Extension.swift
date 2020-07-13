@@ -25,4 +25,7 @@ extension View {
     func buttonTitleStyle() -> some View {
         self.modifier(AppStyles.ButtonTitleStyle())
     }
+    func profileNameStyle() -> some View {
+        self.modifier(AppStyles.ProfileNameStyle())
+    }
 }

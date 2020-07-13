@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct PostListView: View {
+struct ContentView: View {
     
     @ObservedObject var postHandler: PostViewModel
     @State private var modalIsPresented = false
@@ -44,6 +44,6 @@ struct PostListView: View {
 
 struct PostListView_Previews: PreviewProvider {
     static var previews: some View {
-        PostListView(postHandler: PostViewModel())
+        ContentView(postHandler: PostViewModel())
     }
 }

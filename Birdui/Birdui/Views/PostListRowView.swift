@@ -11,6 +11,7 @@ import SwiftUI
 struct PostListRowView: View {
     
     @Binding var post: MediaPost
+    @State private var modalIsPresented = false
     
     var body: some View {
         
@@ -18,11 +19,15 @@ struct PostListRowView: View {
             VStack {
                 VStack(alignment: .leading) {
                     HStack {
-                        Image("mascot_swift-badge")
-                            .imageStyle(width: 50, height: 50)
+                        Button(
+                            action: { self.modalIsPresented = true }
+                        ) {
+                            Image("mascot_swift-badge")
+                                .renderingMode(.original)
+                                .imageStyle(width: 50, height: 50)
+                        }
                         VStack(alignment: .leading) {
                             Text(post.userName)
-                                .fontWeight(.semibold)
                                 .postTitleStyle()
                             Text(post.timestamp.formatted)
                                 .postSubTitleStyle()
@@ -54,8 +59,13 @@ struct PostListRowView: View {
             .pickerStyle(SegmentedPickerStyle())
                 
             .padding(.horizontal, 60)
+                
+            .sheet(isPresented: $modalIsPresented) {
+                ProfileView(post: self.$post)
+            }
         }
         .padding(.vertical, 20)
+        
     }
 }
 

@@ -47,7 +47,7 @@ class AppStyles {
     struct PostTitleStyle: ViewModifier {
         func body(content: Content) -> some View {
             return content
-                .font(.system(size: 20.0))
+                .font(.system(size: 20.0, weight: .semibold))
         }
     }
     
@@ -56,6 +56,14 @@ class AppStyles {
             return content
                 .font(.caption)
                 .foregroundColor(Color("accent"))
+        }
+    }
+    
+    struct ProfileNameStyle: ViewModifier {
+        func body(content: Content) -> some View {
+            return content
+                .foregroundColor(Color.black)
+                .font(.system(size: 30.0, weight: .bold))
         }
     }
     
@@ -92,6 +100,5 @@ class AppStyles {
                 .padding(.leading, 16)                
         }
     }
-    
     
 }
