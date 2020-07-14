@@ -25,7 +25,8 @@ struct NewPostView: View {
         
         VStack {
             Text("New Post")
-                .font(.headline)
+                .font(.title)
+                .padding(.vertical, 20.0)
             Form {
                 TextField("Username", text: $username)
                 Button("Pick image") {
@@ -42,13 +43,20 @@ struct NewPostView: View {
                 }
                 Spacer()
                 Button("Post") {
-                    self.postHandler.addPost(post: MediaPost(textBody: self.postText, userName: self.username, timestamp: Date(), uiImage: self.uiImage, reaction: Reaction.allCases.randomElement()!))
+                    self.postHandler.addPost(post:
+                        MediaPost(textBody: self.postText,
+                                  userName: self.username,
+                                  timestamp: Date(),
+                                  uiImage: self.uiImage,
+                                  reaction: Reaction.allCases.randomElement()!,
+                                  quote: Quote.allCases.randomElement()!))
                     self.presentationMode.wrappedValue.dismiss()
                 }
                 .disabled(username.isEmpty && postText.isEmpty)
             }
             .padding()
         }
+            .accentColor(Color("accent"))
         .sheet(isPresented: $showImagePicker) {
             ImagePicker(image: self.$uiImage)
         }

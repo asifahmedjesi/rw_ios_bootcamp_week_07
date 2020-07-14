@@ -19,11 +19,22 @@ class AppStyles {
         }
     }
     
-    struct ButtonTitleStyle: ViewModifier {
+    struct NewPostButtonTitleStyle: ViewModifier {
         func body(content: Content) -> some View {
             return content
+                .padding(10.0)
+                .overlay(RoundedRectangle(cornerRadius: 10.0)
+                .stroke(lineWidth: 2.0).size(width: 128, height: 41).fill())
                 .padding(.leading, 16)
                 .font(Font.custom("Arial Rounded MT Bold", size: 18))
+                .accentColor(Color("accent"))
+        }
+    }
+    
+    struct DismissProfileButtonImageStyle: ViewModifier {
+        func body(content: Content) -> some View {
+            return content
+                .frame(width: 100.0, height: 30.0)
                 .accentColor(Color("accent"))
         }
     }
@@ -64,6 +75,22 @@ class AppStyles {
             return content
                 .foregroundColor(Color.black)
                 .font(.system(size: 30.0, weight: .bold))
+        }
+    }
+    
+    struct ProfileQuoteTitleStyle: ViewModifier {
+        func body(content: Content) -> some View {
+            return content
+                .font(.system(size: 20.0, weight: .bold))
+                .foregroundColor(Color("accent"))
+        }
+    }
+    
+    struct ProfileQuoteTextStyle: ViewModifier {
+        func body(content: Content) -> some View {
+            return content
+                .foregroundColor(Color.gray)
+                .font(.system(size: 15.0))
         }
     }
     

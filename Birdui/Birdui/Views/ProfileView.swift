@@ -13,21 +13,35 @@ struct ProfileView: View {
     @Binding var post: MediaPost
     @State private var modalIsPresented = false
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         VStack {
             VStack {
-                Image("profile-header-background")
-                    .imageStyle()
-                VStack {
-                    Image("mascot_swift-badge")
-                        .imageStyle(width: 150, height: 150)
-                    Divider().padding(.horizontal, 80)
-                    Text(post.userName).profileNameStyle()
-                }
-                .padding(.top, -85.0)
+                    Image("profile-header-background")
+                        .resizable()
+                        .frame(maxWidth: .infinity, maxHeight: 200.0)
+                Image("mascot_swift-badge")
+                    .imageStyle(width: 120, height: 120)
+                    .padding(.top, -70.0)
             }
+            Text(post.userName).profileNameStyle()
             Spacer()
-            EmptyView()
+            Text("Quote of the day").profileQuoteTitleStyle()
+            Divider()
+                .padding(.horizontal, 30)
+            Text(post.quote.rawValue)
+                .italic()
+                .profileQuoteTextStyle()
+                .padding(.horizontal, 50)
+            Spacer()
+            Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Image(systemName: "chevron.down")
+                .imageStyle(width: 30, height: 30)
+                .dismissProfileButtonImageStyle()
+            }
         }
     }
 }
@@ -40,7 +54,9 @@ struct ProfileView_Previews: PreviewProvider {
                           userName: "Audrey",
                           timestamp: Date(timeIntervalSinceNow: -9876),
                           uiImage: UIImage(named: "octopus"),
-                          reaction: Reaction.allCases.randomElement()!))
+                          reaction: Reaction.allCases.randomElement()!,
+                          quote: Quote.allCases.randomElement()!
+            ))
         )
     }
 }

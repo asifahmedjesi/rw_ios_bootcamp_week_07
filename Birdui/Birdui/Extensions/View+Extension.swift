@@ -22,10 +22,19 @@ extension View {
     func postSubTitleStyle() -> some View {
         self.modifier(AppStyles.PostSubTitleStyle())
     }
-    func buttonTitleStyle() -> some View {
-        self.modifier(AppStyles.ButtonTitleStyle())
+    func newPostButtonTitleStyle() -> some View {
+        self.modifier(AppStyles.NewPostButtonTitleStyle())
     }
     func profileNameStyle() -> some View {
         self.modifier(AppStyles.ProfileNameStyle())
+    }
+    func profileQuoteTitleStyle() -> some View {
+        self.modifier(AppStyles.ProfileQuoteTitleStyle())
+    }
+    func profileQuoteTextStyle() -> some View {
+        self.modifier(AppStyles.ProfileQuoteTextStyle())
+    }
+    func dismissProfileButtonImageStyle() -> some View {
+        self.modifier(AppStyles.DismissProfileButtonImageStyle())
     }
 }

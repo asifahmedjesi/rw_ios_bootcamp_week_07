@@ -77,7 +77,9 @@ struct PostView_Previews: PreviewProvider {
                           userName: "Audrey",
                           timestamp: Date(timeIntervalSinceNow: -9876),
                           uiImage: UIImage(named: "octopus"),
-                          reaction: Reaction.allCases.randomElement()!))
+                          reaction: Reaction.allCases.randomElement()!,
+                          quote: Quote.allCases.randomElement()!
+            ))
         )
     }
 }

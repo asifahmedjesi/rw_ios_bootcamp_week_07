@@ -21,6 +21,7 @@ struct ContentView: View {
             List {
                 Toggle(isOn: $isFilteringLovedPosts) {
                     Text(verbatim: "Show only loved posts")
+                        .font(.caption)
                 }
                 ForEach(postHandler.posts) { index in
                     if !self.isFilteringLovedPosts || self.postHandler.posts[index].reaction == .love {
@@ -28,7 +29,12 @@ struct ContentView: View {
                     }
                 }
                 if self.isFilteringLovedPosts && self.postHandler.countLoveReactions() {
-                    Image("empty-list").resizable().aspectRatio(contentMode: .fit)
+                    VStack(alignment: .center) {
+                        Image("empty-list")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxWidth: .infinity, maxHeight: 200)
+                    }
                 }
             }
         }

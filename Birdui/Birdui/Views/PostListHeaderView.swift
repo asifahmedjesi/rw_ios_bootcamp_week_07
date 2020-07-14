@@ -25,7 +25,11 @@ struct PostListHeaderView: View {
             Button(action: {
                 self.modalIsPresented = true
             }) {
-                Text("Create New Post").buttonTitleStyle()
+                HStack(alignment: .center) {
+                    Image(systemName: "square.and.pencil")
+                    Text("New Post")
+                }
+                .newPostButtonTitleStyle()
             }
         }
         
