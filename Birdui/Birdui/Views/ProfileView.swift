@@ -18,9 +18,9 @@ struct ProfileView: View {
     var body: some View {
         VStack {
             VStack {
-                    Image("profile-header-background")
-                        .resizable()
-                        .frame(maxWidth: .infinity, maxHeight: 200.0)
+                Image("profile-header-background")
+                    .resizable()
+                    .frame(maxWidth: .infinity, maxHeight: 200.0)
                 Image("mascot_swift-badge")
                     .imageStyle(width: 120, height: 120)
                     .padding(.top, -70.0)
@@ -39,8 +39,8 @@ struct ProfileView: View {
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                 Image(systemName: "chevron.down")
-                .imageStyle(width: 30, height: 30)
-                .dismissProfileButtonImageStyle()
+                    .imageStyle(width: 30, height: 30)
+                    .dismissProfileButtonImageStyle()
             }
         }
     }

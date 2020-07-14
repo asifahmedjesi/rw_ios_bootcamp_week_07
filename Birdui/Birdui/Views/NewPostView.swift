@@ -56,7 +56,7 @@ struct NewPostView: View {
             }
             .padding()
         }
-            .accentColor(Color("accent"))
+        .accentColor(Color("accent"))
         .sheet(isPresented: $showImagePicker) {
             ImagePicker(image: self.$uiImage)
         }

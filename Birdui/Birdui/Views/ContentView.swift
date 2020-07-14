@@ -31,9 +31,9 @@ struct ContentView: View {
                 if self.isFilteringLovedPosts && self.postHandler.countLoveReactions() {
                     VStack(alignment: .center) {
                         Image("empty-list")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxWidth: .infinity, maxHeight: 200)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: .infinity, maxHeight: 200)
                     }
                 }
             }
@@ -44,7 +44,7 @@ struct ContentView: View {
         .onAppear(perform: {
             UITableView.appearance().separatorStyle = .none
         })
-    
+        
     }
 }
 
